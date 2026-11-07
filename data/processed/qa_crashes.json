@@ -1,0 +1,67 @@
+{
+  "2015": {
+    "crashes": 32538,
+    "fatalities": 35484,
+    "ped_fatalities": 5494,
+    "deaths_in_person_file": 35484
+  },
+  "2016": {
+    "crashes": 34748,
+    "fatalities": 37806,
+    "ped_fatalities": 6080,
+    "deaths_in_person_file": 37806
+  },
+  "2017": {
+    "crashes": 34560,
+    "fatalities": 37473,
+    "ped_fatalities": 6075,
+    "deaths_in_person_file": 37473
+  },
+  "2018": {
+    "crashes": 33919,
+    "fatalities": 36835,
+    "ped_fatalities": 6374,
+    "deaths_in_person_file": 36835
+  },
+  "2019": {
+    "crashes": 33487,
+    "fatalities": 36355,
+    "ped_fatalities": 6272,
+    "deaths_in_person_file": 36355
+  },
+  "2020": {
+    "crashes": 35935,
+    "fatalities": 39007,
+    "ped_fatalities": 6565,
+    "deaths_in_person_file": 39007
+  },
+  "2021": {
+    "crashes": 39785,
+    "fatalities": 43230,
+    "ped_fatalities": 7470,
+    "deaths_in_person_file": 43230
+  },
+  "2022": {
+    "crashes": 39422,
+    "fatalities": 42721,
+    "ped_fatalities": 7593,
+    "deaths_in_person_file": 42721
+  },
+  "2023": {
+    "crashes": 37769,
+    "fatalities": 41025,
+    "ped_fatalities": 7367,
+    "deaths_in_person_file": 41025
+  },
+  "2024": {
+    "crashes": 36297,
+    "fatalities": 39254,
+    "ped_fatalities": 7080,
+    "deaths_in_person_file": 39254
+  },
+  "total": {
+    "crashes": 358460,
+    "with_valid_coords": 356937,
+    "fatalities": 389190
+  }
+}

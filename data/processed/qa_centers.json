@@ -1,0 +1,34 @@
+{
+  "destinations_in_state_boxes": 17317538,
+  "destinations_in_towns": 1304853,
+  "towns": 15195,
+  "towns_with_center": 10659,
+  "share_with_center_by_size": {
+    "2,500 to 9,999": 0.989,
+    "500 to 2,499": 0.896,
+    "under 500": 0.371
+  },
+  "towns_with_center_by_rule": {
+    "incorporated place": 0.708,
+    "new england town, no village (center only)": 0.449,
+    "new england town, village limits": 0.926
+  },
+  "median_dest_in_center": 34.0,
+  "config": {
+    "radius_m": 402.3,
+    "min_destinations": 10,
+    "min_confidence": 0.5,
+    "categories": [
+      "shopping",
+      "food_and_drink",
+      "services_and_business",
+      "community_and_government",
+      "education",
+      "health_care",
+      "lodging",
+      "arts_and_entertainment",
+      "lifestyle_services",
+      "cultural_and_historic"
+    ]
+  }
+}

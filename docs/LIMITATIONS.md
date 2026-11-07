@@ -1,0 +1,17 @@
+# Limitations
+
+*Plain-language note: an honest list of what this dataset cannot tell you. The paper's discussion must not claim more than this file allows.*
+
+1. **Observational data.** These are counts of crashes where they happened. They show where deaths concentrate, not why. A higher pedestrian death rate in town centers partly reflects that more people walk there; FARS has no data on how many people walk.
+2. **Fatal crashes only.** FARS records crashes where someone died within 30 days. Injury crashes, which are far more numerous in slow downtown traffic, are not included.
+3. **One traffic year.** Traffic volume (AADT) is the 2024 HPMS value applied to all ten years. Towns where traffic changed a lot (a bypass opened, a plant closed) will have rates that are off for earlier years.
+4. **Road network snapshot.** Roads and route numbers are as reported in HPMS 2024. A crash before a road was rerouted or bypassed may be placed on today's route or dropped.
+5. **Crash location accuracy.** FARS coordinates are usually within a few meters (median distance to road 2.3 m), but a crash at an intersection can be placed on the crossing route. Where two study routes meet, the FARS road name decides.
+6. **Town center definition.** Centers come from the location of businesses and services in Overture Maps, a 2026 snapshot. It may miss closed downtowns, count a strip at a highway edge in a town with no traditional downtown, and cover very small towns poorly: 63% of towns under 500 people have no identifiable center (only 37% do). In a check of 45 sampled towns, all 45 centers lay within a quarter mile of the town's post office, town or city hall or offices, or county courthouse; three of them (Doolittle and Duenweg, MO; Granby, MA) are civic or commercial centers on a highway rather than a traditional downtown, and in Granby the historic common is about 3 km away. Where a town's present-day services have moved to a highway strip, the center follows them.
+7. **New England uses a regional rule.** New England towns are county subdivisions that include large rural areas, so "town limits" there are the villages and Census village areas inside each town. 732 New England towns have no village area; for them the town center stands in for town limits and there is no "rest of town" zone. Pooled results change very little without New England (see qa_report.txt, section 5b).
+8. **Alaska and Hawaii excluded.** Their road systems and town patterns differ; they are left for a later version.
+9. **Missing traffic counts on minor collectors.** About 95% of minor-collector length lacks a traffic count. Those rows keep their crash counts but are left out of rates (rates cover 97% of matched crashes).
+10. **Suburb rule.** Towns more than half inside a 2020 urban area of 50,000+ are excluded as suburbs. Some freestanding towns next to a city may be dropped, and some exurbs kept.
+11. **Speed limits are incomplete.** HPMS reports posted speed limits mainly on the National Highway System, so speed is context, not a measured cause.
+12. **Legal limits can include countryside.** Town limits are legal boundaries. Some small cities (for example Caribou and Ellsworth, Maine) take in large rural areas, so part of their "rest of town" highway is rural in character.
+13. **Small numbers.** Many single rows have zero or one crash. Rates are meaningful when pooled (by zone, size, region, state), not for one town in isolation.

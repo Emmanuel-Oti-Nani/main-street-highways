@@ -1,0 +1,12 @@
+data/raw/*
+!data/raw/PROVENANCE.txt
+data/processed/by_state/
+data/processed/*.gpkg
+data/processed/crashes_all.parquet
+data/processed/towns_all.csv
+docs/verify/aerial/
+paper/manuscript*
+paper/*.pdf
+*.part
+__pycache__/
+.env

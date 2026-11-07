@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+title: "Main Street Highways: fatal crashes on state and U.S. highways through small-town centers"
+type: dataset
+version: "1.0.0"
+date-released: "2026-11-07"
+license: CC-BY-4.0
+repository-code: "https://github.com/Emmanuel-Oti-Nani/main-street-highways"
+authors:
+  - family-names: Nani
+    given-names: Emmanuel Oti
+    orcid: "https://orcid.org/0009-0009-4175-8962"
+    affiliation: "Independent Researcher, Springfield, Missouri, USA"
+keywords: [pedestrian safety, small towns, rural highways, main streets, FARS, HPMS, open data]

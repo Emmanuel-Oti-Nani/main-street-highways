@@ -1,0 +1,104 @@
+MAIN STREET HIGHWAYS - QUALITY REPORT
+============================================================
+
+1. TOWNS
+   Census places, all states: 32,041
+   Incorporated places, lower 48 + DC outside New England: 19,146
+   Under 10,000 (2024 est.), incl. New England towns: 17,216
+   Dropped as suburbs (>50% inside urban area 50k+): 2,021
+   New England towns (county subdivisions) under 10,000: 1,148
+   Small towns kept: 15,195  by size: {'under 500': 6153, '500 to 2,499': 6101, '2,500 to 9,999': 2941}
+   By rule: {'incorporated place': 14070, 'new england town, no village (center only)': 732, 'new england town, village limits': 393}
+   Towns with an identifiable center (>=10 destinations in 1/4 mi): 10,659
+   Share with center by size: {'2,500 to 9,999': 0.989, '500 to 2,499': 0.896, 'under 500': 0.371}
+
+2. ROADS AND SEGMENTS (per state)
+   st   sections      kept center mi  town mi  appr mi crashes dropped
+   AL    123,922   121,610       144    1,656    3,661   1,465      62
+   AR     61,723    59,049       188    1,596    6,525   1,355      28
+   AZ     72,837    72,445        19      241      538     213      14
+   CA    188,942   188,942        29      153      845     476      20
+   CO     84,302    83,849        74      339    2,121     467      14
+   CT     25,644    24,436        46      133      875     275       6
+   DE     26,620    22,168        20       80      437     228       2
+   FL     95,854    95,730        80      500    1,804   1,385      28
+   GA    109,522   109,407       224    1,594    6,452   1,850      62
+   IA     78,877    59,052       139      663    4,710     534      10
+   ID     53,418    53,418        56      197    1,491     331       3
+   IL     86,256    85,714       247    1,174    6,249   1,274      50
+   IN    270,635   270,358       170      540    4,440   1,138      45
+   KS    102,823    93,245        99      402    4,345     551      14
+   KY    190,347   171,799       177    1,239    6,027   1,458      24
+   LA    201,432   163,291       153      998    4,383   1,167      24
+   MA     57,570    50,859        36       70      624     124       7
+   MD     53,372    52,408        44      160    1,094     395       9
+   ME    170,256   167,891       267    1,102    4,294     493      24
+   MI     69,740    68,422       121      385    2,598     597      19
+   MN    120,951   118,354       185      898    5,215     607       9
+   MO    392,026   385,670       283    1,614   10,388   1,685      97
+   MS     48,554    46,286       116    1,000    3,880   1,227      50
+   MT     46,750    46,601        56      250    1,552     171      12
+   NC    276,678   164,647       256    1,574    6,948   2,251      95
+   ND     42,949    42,481        39      220    2,277     115       7
+   NE    123,146   123,025       109      320    4,106     384       8
+   NH     54,674    53,319        96      202    1,609     275      22
+   NJ     27,624    27,206        16       61      334     152       6
+   NM     39,749    39,110        42      389    1,458     232      23
+   NV     28,640    28,474         6       47      176      24       3
+   NY    209,603   209,603       194      570    4,643     762      37
+   OH     92,414    89,227       276      885    7,418   1,381      36
+   OK     93,609    73,831       169    1,235    5,480   1,342      36
+   OR     82,285    81,720        73      216    1,564     510       8
+   PA    414,682   402,642       340    1,226    8,039   1,759      21
+   RI     28,621    24,944         9       31      144      15       3
+   SC    115,385    67,626       171    1,140    5,237   1,625      17
+   SD     81,971    77,720        50      188    2,218     157       3
+   TN     65,665    65,665       131    1,442    3,788   1,283      18
+   TX    372,408   372,408       529    4,306   17,739   4,381     639
+   UT     60,001    58,529        48      495    1,193     249       8
+   VA    259,880   227,766       151      660    3,379     819      15
+   VT     36,995    36,177        76      281    1,608     197      13
+   WA     54,464    52,260        55      223    1,572     341       5
+   WI    106,476    74,101       186      869    4,901     859      22
+   WV    141,042   134,755       117      556    3,205     619       4
+   WY     31,707    31,601        34      137    1,090     102      10
+
+3. CRASH MATCHING
+   Fatal crashes, lower 48 + DC, 2015-2024: 357,175
+   Within 50 m of a study road: 40,992
+   Dropped because FARS records a non-highway or Interstate road: 1,692
+   Kept: 39,300  (CENTER 1,131, TOWN 7,059, APPROACH 31,110)
+   Snap distance median 2.3 m, 95th pct 23.1 m
+   FARS ROUTE code of kept crashes: {3: 21911, 2: 15304, 8: 1147, 95: 322, 4: 245, 12: 221, 6: 54, 0: 42, 5: 24, 7: 19, 9: 8, 96: 1, 99: 1, 11: 1}
+   FARS road name number matches the assigned route: 90.7% of kept crashes
+   Kept only because of that name match (FARS route/owner codes blank or 'other'): 1,253
+   Integrity: every crash on exactly one segment; segment ids unique (asserted).
+
+4. RATE BASE
+   Rates use segments on principal arterials, minor arterials and major collectors
+   (HPMS f_system 2-5) with traffic counts on >=90% of length.
+   Share of matched crashes inside the rate base: 96.9%
+   AADT is the 2024 snapshot applied to all ten years (see LIMITATIONS).
+
+5. POOLED RESULTS (rate base)
+   APPROACH  miles   160,857  crashes 30,059  rate 1.275 [1.260-1.289]  ped rate 0.093 [0.089-0.097]  ped share 6.5%  night 41.2%
+   CENTER    miles     5,782  crashes  1,120  rate 0.975 [0.918-1.033]  ped rate 0.276 [0.246-0.308]  ped share 26.5%  night 41.9%
+   TOWN      miles    32,123  crashes  6,915  rate 0.965 [0.943-0.988]  ped rate 0.146 [0.137-0.155]  ped share 13.8%  night 43.6%
+
+5b. ROBUSTNESS: WITHOUT NEW ENGLAND (towns from county subdivisions, village limits)
+   APPROACH  crashes 29,068  rate 1.297  ped rate 0.095  ped share 6.5%
+   CENTER    crashes  1,054  rate 0.992  ped rate 0.285  ped share 26.9%
+   TOWN      crashes  6,733  rate 0.975  ped rate 0.147  ped share 13.8%
+   New England only:
+   APPROACH  crashes    991  rate 0.852  ped rate 0.058  ped share 6.3%
+   CENTER    crashes     66  rate 0.762  ped rate 0.162  ped share 19.7%
+   TOWN      crashes    182  rate 0.701  ped rate 0.108  ped share 14.7%
+
+6. SPOT CHECKS (look these up in FARS: year, state, ST_CASE)
+   2017_530402: state 53.0, ST_CASE 530402, 2017-09-14 hour 18, 1 killed, ped 1, FARS road 'SR-215', our route SR-215, zone CENTER, lat 48.41249 lon -119.52841
+   2024_360364: state 36.0, ST_CASE 360364, 2024-05-10 hour 20, 1 killed, ped 1, FARS road 'SR-10 DELAWARE ST', our route SR-10, zone CENTER, lat 42.16857 lon -75.13142
+   2023_483771: state 48.0, ST_CASE 483771, 2023-11-19 hour 7, 1 killed, ped 0, FARS road 'US-59 N', our route US-59, zone TOWN, lat 30.32231 lon -95.10111
+   2017_370899: state 37.0, ST_CASE 370899, 2017-09-01 hour 12, 1 killed, ped 0, FARS road 'US-276', our route US-19, zone TOWN, lat 35.51671 lon -83.08700
+   2024_170015: state 17.0, ST_CASE 170015, 2024-01-30 hour 15, 2 killed, ped 0, FARS road 'SR- 3', our route SR-3, zone APPROACH, lat 37.25969 lon -89.44854
+   2024_480085: state 48.0, ST_CASE 480085, 2024-01-14 hour 0, 1 killed, ped 0, FARS road 'US-90', our route US-90, zone APPROACH, lat 29.35078 lon -99.07989
+   2018_360756: state 36.0, ST_CASE 360756, 2018-10-06 hour 13, 20 killed, ped 2, FARS road 'SR-30A', our route SR-30, zone APPROACH, lat 42.70032 lon -74.30179

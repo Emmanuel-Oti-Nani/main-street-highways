@@ -1,0 +1,53 @@
+{
+  "places_all_states": 32041,
+  "incorporated_lower48_dc": 19146,
+  "no_population_match": 0,
+  "under_pop_max": 17216,
+  "ne_cousubs_all": 1616,
+  "ne_no_population_match": 0,
+  "ne_towns_under_pop_max": 1148,
+  "towns_by_rule": {
+    "incorporated place": 14070,
+    "new england town, no village (center only)": 732,
+    "new england town, village limits": 393
+  },
+  "dropped_as_suburbs": 2021,
+  "towns": 15195,
+  "towns_by_size": {
+    "under 500": 6153,
+    "500 to 2,499": 6101,
+    "2,500 to 9,999": 2941
+  },
+  "config": {
+    "pop_max": 10000,
+    "incorporated_only": true,
+    "big_ua_pop": 50000,
+    "big_ua_share": 0.5,
+    "exclude_states": [
+      "02",
+      "15"
+    ],
+    "new_england": [
+      "09",
+      "23",
+      "25",
+      "33",
+      "44",
+      "50"
+    ],
+    "ne_town_classes": [
+      "T1",
+      "C5"
+    ],
+    "ne_village_classes": [
+      "C1",
+      "C2",
+      "C5",
+      "C7",
+      "C8",
+      "C9",
+      "U1",
+      "U2"
+    ]
+  }
+}
