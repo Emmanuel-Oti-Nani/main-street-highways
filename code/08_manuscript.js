@@ -172,7 +172,7 @@ add(note(`Note: Rate base only. New England towns use village limits (see Data a
 
 add(heading("Time of Day", 2));
 const pn = S.ped_crash_night_share_by_zone;
-add(para(`Overall, about ${pct(C.night_share)} of fatal crashes occurred at night in every zone. Fatal pedestrian crashes differed. Nationally, most pedestrian deaths occur in the dark, and that was true on the approaches (${pct(pn.APPROACH)} at night) and in the rest of town (${pct(pn.TOWN)}). In town centers, a smaller share, ${pct(pn.CENTER)}, occurred at night, so daytime pedestrian deaths are relatively more common where shops and services are concentrated.`));
+add(para(`About ${pct(C.night_share)} of fatal crashes occurred at night (6:00 p.m. to 5:59 a.m.) in every zone. Fatal pedestrian crashes differed: ${pct(pn.APPROACH)} occurred at night on the approaches and ${pct(pn.TOWN)} in the rest of town, but only ${pct(pn.CENTER)} in town centers, so daytime pedestrian deaths are relatively more common where shops and services are concentrated.`));
 
 add(heading("Sensitivity to the New England Rule", 2));
 add(para(`Because New England towns were defined differently, results were recomputed without them. Excluding New England, the town-center pedestrian death rate was ${f(noNE("CENTER").ped_rate, 3)} and the approach rate ${f(noNE("APPROACH").ped_rate, 3)} per 100 million VMT, nearly identical to the national figures. Within New England alone, rates were lower overall but showed the same pattern (${f(NEo("CENTER").ped_rate, 3)} versus ${f(NEo("APPROACH").ped_rate, 3)}).`));
@@ -202,7 +202,7 @@ const refs = [
   "Dumbaugh, E., and R. Rae. 2009. Safe Urban Form: Revisiting the Relationship Between Community Design and Traffic Safety. Journal of the American Planning Association, Vol. 75, No. 3, pp. 309-329.",
   "Ewing, R., and E. Dumbaugh. 2009. The Built Environment and Traffic Safety: A Review of Empirical Evidence. Journal of Planning Literature, Vol. 23, No. 4, pp. 347-367.",
   "FHWA. 2025. Highway Performance Monitoring System, 2024 Spatial Data by State. Federal Highway Administration, Washington, D.C. https://geo.dot.gov. Accessed November 2026.",
-  "Forbes, G. J. 2011. NCHRP Synthesis 412: Speed Reduction Techniques for Rural High-to-Low Speed Transitions. Transportation Research Board, Washington, D.C.",
+  "Forbes, G. J. 2011. NCHRP Synthesis 412: Speed Reduction Techniques for Rural High-to-Low Speed Transitions. Transportation Research Board, Washington, D.C. https://doi.org/10.17226/22890.",
   "GHSA. 2025. Pedestrian Traffic Fatalities by State: 2024 Preliminary Data (January-December). Governors Highway Safety Association, Washington, D.C.",
   "Nani, E. O. 2026a. How Rural Is Rural? Agreement Between the FARS Rural/Urban Label and 2020 Census Urban Areas for U.S. Traffic Deaths, 2015-2024. EarthArXiv preprint. https://doi.org/10.31223/X5RV4C.",
   "Nani, E. O. 2026c. Main Street Highways: Fatal Crashes on State and U.S. Highways Through Small-Town Centers (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24030310.",
@@ -212,7 +212,7 @@ const refs = [
   "Overture Maps Foundation. 2026. Overture Maps Places, Release 2026-10-21.0. https://overturemaps.org. Accessed November 2026.",
   "Smart Growth America. 2024. Dangerous by Design 2024. Smart Growth America, Washington, D.C.",
   "Tefft, B. C. 2013. Impact Speed and a Pedestrian's Risk of Severe Injury or Death. Accident Analysis & Prevention, Vol. 50, pp. 871-878.",
-  "Torbic, D. J., D. K. Gilmore, K. M. Bauer, C. D. Bokenkroger, D. W. Harwood, L. M. Lucas, R. J. Frazier, C. S. Kinzel, D. L. Petree, and M. D. Forsberg. 2012. NCHRP Report 737: Design Guidance for High-Speed to Low-Speed Transition Zones for Rural Highways. Transportation Research Board, Washington, D.C.",
+  "Torbic, D. J., D. K. Gilmore, K. M. Bauer, C. D. Bokenkroger, D. W. Harwood, L. M. Lucas, R. J. Frazier, C. S. Kinzel, D. L. Petree, and M. D. Forsberg. 2012. NCHRP Report 737: Design Guidance for High-Speed to Low-Speed Transition Zones for Rural Highways. Transportation Research Board, Washington, D.C. https://doi.org/10.17226/22670.",
   "U.S. Geological Survey. 2021. Geographic Names Information System, Domestic Names Archive (August 25, 2021). https://www.usgs.gov/tools/geographic-names-information-system-gnis. Accessed November 2026.",
   "U.S. Census Bureau. 2023. 2020 Census Urban Areas. Washington, D.C.",
   "U.S. Census Bureau. 2024a. TIGER/Line Shapefiles, 2024: Places and County Subdivisions. Washington, D.C.",
