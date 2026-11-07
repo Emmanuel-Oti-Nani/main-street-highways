@@ -189,7 +189,7 @@ add(heading("Conclusions"));
 add(para(`This study provides the first national, segment-level dataset of fatal crashes on state and U.S. highways that serve as small-town main streets. In ${n0(S.n_main_street_towns)} towns where such a highway runs through the center, fatal crashes are less frequent per mile driven than on the approaches, but pedestrian deaths are about ${ratio(C.ped_rate, P.ped_rate)} times as frequent. The dataset gives state agencies, small towns, and researchers a common base for finding these segments, tracking them over time, and evaluating treatments.`));
 
 add(heading("Data Availability"));
-add(para(`The dataset, code, provenance log, and documentation are available at Zenodo, [DOI once minted], and GitHub, https://github.com/Emmanuel-Oti-Nani/main-street-highways.`));
+add(para(`The dataset, code, provenance log, and documentation are available at Zenodo, https://doi.org/10.5281/zenodo.24030310, and GitHub, https://github.com/Emmanuel-Oti-Nani/main-street-highways.`));
 add(heading("Author Contributions"));
 add(para(`The author confirms sole responsibility for the following: study conception and design, data collection, analysis and interpretation of results, and manuscript preparation.`));
 add(heading("Declaration of Conflicting Interests"));
@@ -205,6 +205,7 @@ const refs = [
   "Forbes, G. J. 2011. NCHRP Synthesis 412: Speed Reduction Techniques for Rural High-to-Low Speed Transitions. Transportation Research Board, Washington, D.C.",
   "GHSA. 2025. Pedestrian Traffic Fatalities by State: 2024 Preliminary Data (January-December). Governors Highway Safety Association, Washington, D.C.",
   "Nani, E. O. 2026a. How Rural Is Rural? Agreement Between the FARS Rural/Urban Label and 2020 Census Urban Areas for U.S. Traffic Deaths, 2015-2024. EarthArXiv preprint. https://doi.org/10.31223/X5RV4C.",
+  "Nani, E. O. 2026c. Main Street Highways: Fatal Crashes on State and U.S. Highways Through Small-Town Centers (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24030310.",
   "Nani, E. O. 2026b. U.S. Rural Road Fatality County Panel (Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23547649.",
   "Nani, E. O., G. Camynta-Baezie, J. Anbazu, N. S. Antwi, D. Blija, E. Adabor, and M. O. Asibey. 2025. A Burgeon in Informal Economic Activities Along Highways in Urbanizing Cities: Implications for Sustainable Development. Transportation in Developing Economies, Vol. 11, No. 1, Article 5. https://doi.org/10.1007/s40890-024-00222-0.",
   "NHTSA. 2026. Fatality Analysis Reporting System (FARS) National Data Files, 2015-2024. National Highway Traffic Safety Administration, Washington, D.C. https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars. Accessed November 2026.",

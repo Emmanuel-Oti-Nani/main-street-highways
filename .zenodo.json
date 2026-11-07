@@ -1,0 +1,22 @@
+{
+  "upload_type": "dataset",
+  "title": "Main Street Highways: fatal crashes on state and U.S. highways through small-town centers",
+  "creators": [
+    {
+      "name": "Nani, Emmanuel Oti",
+      "orcid": "0009-0009-4175-8962",
+      "affiliation": "Independent Researcher, Springfield, Missouri, USA"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "keywords": [
+    "pedestrian safety",
+    "small towns",
+    "rural highways",
+    "main streets",
+    "FARS",
+    "HPMS",
+    "open data"
+  ],
+  "description": "Open, segment-level dataset of fatal crashes (FARS 2015-2024) on state and U.S. highways in and near U.S. towns under 10,000 people (lower 48 states), split into town center, rest of town, and outside town, with 2024 HPMS traffic. Includes code, provenance log, quality report, codebook, limitations, and verification records."
+}

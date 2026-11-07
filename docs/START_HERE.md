@@ -27,7 +27,7 @@ All sources are free and public. Nothing here needs special permission.
 ## What you will have at the end
 
 - [x] **A public project page** on GitHub where anyone can see and reuse your work: https://github.com/Emmanuel-Oti-Nani/main-street-highways
-- [ ] **A permanent citation number (DOI)** from Zenodo for the Main Street Highways segment dataset (added to the README after release)
+- [x] **A permanent citation number (DOI)** from Zenodo: https://doi.org/10.5281/zenodo.24030310 (all versions); v1.0.0 is https://doi.org/10.5281/zenodo.24030311
 - [ ] **A paper submitted to the TRB 2028 Annual Meeting** (Transportation Research Board), for presentation and journal review (target August 2027)
 - [ ] A short sample check of town centers against aerial photos, documented so others can see it was done
 

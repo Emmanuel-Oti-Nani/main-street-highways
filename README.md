@@ -1,5 +1,7 @@
 # Main Street Highways
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24030310.svg)](https://doi.org/10.5281/zenodo.24030310)
+
 **Status:** Released. Version 1.0.0, built from FARS 2015-2024 and HPMS 2024.
 
 In thousands of small American towns, the main street is also a state or U.S. highway. This project is an open dataset of
@@ -63,6 +65,7 @@ Every download is logged with its source address, date and SHA-256 fingerprint i
 
 Code: MIT. Data and documents: CC BY 4.0, with credit to the sources above.
 Cite as: Emmanuel Oti Nani (2027). *Main Street Highways: fatal crashes on state and U.S. highways through small-town centers*
-(Version 1.0.0) [Data set]. Zenodo.
+(Version 1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.24030310
+(all versions; this version: https://doi.org/10.5281/zenodo.24030311)
 
 Maintainer: Emmanuel Oti Nani, Independent Researcher, Springfield, Missouri, USA. ORCID 0009-0009-4175-8962.

@@ -11,7 +11,11 @@ FINAL = "--final" in sys.argv
 R = {r["zone"]: r for r in S["rates_pooled"]}
 status = "Released" if FINAL else "DRAFT, not yet verified by the author"
 VERSION = "1.0.0"
+CONCEPT_DOI = "10.5281/zenodo.24030310"  # all versions
+VERSION_DOI = "10.5281/zenodo.24030311"  # v1.0.0
 txt = f"""# Main Street Highways
+
+[![DOI](https://zenodo.org/badge/DOI/{CONCEPT_DOI}.svg)](https://doi.org/{CONCEPT_DOI})
 
 **Status:** {status}. Version {VERSION}, built from FARS {S['years']} and HPMS {S['hpms_year']}.
 
@@ -76,7 +80,8 @@ Every download is logged with its source address, date and SHA-256 fingerprint i
 
 Code: MIT. Data and documents: CC BY 4.0, with credit to the sources above.
 Cite as: {A['name']} (2027). *Main Street Highways: fatal crashes on state and U.S. highways through small-town centers*
-(Version {VERSION}) [Data set]. Zenodo.
+(Version {VERSION}) [Data set]. Zenodo. https://doi.org/{CONCEPT_DOI}
+(all versions; this version: https://doi.org/{VERSION_DOI})
 
 Maintainer: {A['name']}, {A['affiliation']}. ORCID {A['orcid']}.
 """

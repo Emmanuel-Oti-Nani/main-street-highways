@@ -5,6 +5,14 @@ type: dataset
 version: "1.0.0"
 date-released: "2026-11-07"
 license: CC-BY-4.0
+doi: "10.5281/zenodo.24030310"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24030310"
+    description: "All versions"
+  - type: doi
+    value: "10.5281/zenodo.24030311"
+    description: "Version 1.0.0"
 repository-code: "https://github.com/Emmanuel-Oti-Nani/main-street-highways"
 authors:
   - family-names: Nani
