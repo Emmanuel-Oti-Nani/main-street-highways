@@ -8,7 +8,7 @@ In thousands of small American towns, the main street is also a state or U.S. hi
 
 I built the first national dataset of them. It covers about 15,000 towns under 10,000 people in the lower 48 states. For each one I located the town center from where its shops and services cluster, then cut every state and U.S. highway into three parts: the town center, the rest of town, and the same road just outside town. I placed 39,300 fatal crashes from 2015 to 2024 on those parts.
 
-The result is a clear trade-off. Per mile driven, fatal crashes are less common in town centers than on the approaches. But pedestrians die there at three times the rate, and more than a quarter of the people killed in town centers were walking, against about 7 percent outside town. The dataset is free and citable on Zenodo, so state DOTs and small towns can find their own main street highways and track them.
+The result is a clear trade-off. Per mile driven, fatal crashes are less common in town centers than on the approaches. But pedestrians die there at three times the rate, and more than a quarter of the people killed in town centers were walking, against about 6 percent outside town. The dataset is free and citable on Zenodo, so state DOTs and small towns can find their own main street highways and track them.
 
 ## Two sentences
 

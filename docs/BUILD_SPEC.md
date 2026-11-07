@@ -25,17 +25,19 @@ UNIT:      Route-zone segment: one town x one signed route x one zone.
            APPROACH (same route, 0 to 5 miles outside town limits, not inside any other place).
            Also a crash-level file (one row per fatal crash matched to a segment).
 
-MEASURES:  length_mi; AADT (length-weighted); VMT_10yr = AADT x length x 3,652 days
+MEASURES:  length_mi; AADT (length-weighted); VMT_10yr = AADT x length x 365.25 x 10 days
            fatal_crashes, fatalities, ped_fatalities (PER_TYP 5), bike_fatalities (6, 7)
            fatal_crash_rate per 100 million VMT; night_share (crashes 6pm-6am);
-           speed_limit, through_lanes, signals, on-street parking (HPMS context)
+           speed_limit, through_lanes, on-street parking (HPMS context)
            Comparison: CENTER vs TOWN vs APPROACH, pooled and by route type and region.
 
-OUTPUTS:   data/processed/segments.csv, segments.gpkg, crashes_matched.csv, towns.csv
-           docs/CODEBOOK.md, LIMITATIONS.md, VERIFY_CHECKLIST.md, qa_report.txt
-           paper/stats.json, paper/figures/*, paper/manuscript.docx (TRB format, 7,500 words incl. tables)
+OUTPUTS:   data/processed/segments.csv, segments_geo.parquet, centers_geo.parquet,
+           crashes_matched.csv, towns.csv, qa_report.txt
+           docs/CODEBOOK.md, LIMITATIONS.md, VERIFY_CHECKLIST.md (verification record)
+           paper/stats.json, paper/figures/*, paper/manuscript_TRB2028.docx (TRB format,
+           7,500-word limit incl. tables), paper/preprint/ (two-column preprint)
 
-VENUES:    GitHub (public repo) -> Zenodo DOI (target July 2027)
+VENUES:    GitHub (public repo) -> Zenodo DOI (published Nov 7, 2026: 10.5281/zenodo.24030310)
            -> TRB 2028 Annual Meeting paper (submission window ~Aug 1, 2027)
 
 VERIFY POINTS (author rules on each):
@@ -43,7 +45,7 @@ VERIFY POINTS (author rules on each):
   V2 Town population cutoff and which places count as towns (incorporated vs CDP)
   V3 Width of the APPROACH comparison zone (5 miles default)
   V4 Crash-to-road snapping distance (crashes more than 50 m from a signed route dropped)
-  V5 Aerial-imagery sample: 30 random town centers, author confirms each is a real downtown
+  V5 Town-center sample: 45 random towns (30 MO, 15 New England), aerial imagery plus civic anchors
 
 LICENSE:   Code MIT. Data and documents CC BY 4.0, with attribution to NHTSA, FHWA,
            Census Bureau, and Overture Maps / OpenStreetMap contributors (ODbL notice

@@ -29,21 +29,22 @@ All sources are free and public. Nothing here needs special permission.
 - [x] **A public project page** on GitHub where anyone can see and reuse your work: https://github.com/Emmanuel-Oti-Nani/main-street-highways
 - [x] **A permanent citation number (DOI)** from Zenodo: https://doi.org/10.5281/zenodo.24030310 (all versions); v1.0.0 is https://doi.org/10.5281/zenodo.24030311
 - [ ] **A paper submitted to the TRB 2028 Annual Meeting** (Transportation Research Board), for presentation and journal review (target August 2027)
-- [ ] A short sample check of town centers against aerial photos, documented so others can see it was done
+- [x] A documented check of 45 sample town centers against aerial imagery and each town's post office, town hall or courthouse (all 45 within a quarter mile)
 
 ## How it connects to your work
 
-Your published study found that roadside trading along a national highway was tied to congestion, poor sanitation, and road accidents, with 21.8 percent of reported accident cases involving roadside traders. This project asks the same question in U.S. small towns, where shops line the highway instead of traders. It also builds directly on your Rural Road Fatality County Panel: same crash data, same years, now down to the street level.
+Your published study found that informal economic activities along a national highway in Ghana were tied to road accidents, traffic congestion, and poor sanitation, with 21.8 percent of reported accident cases involving informal economic actors. This project asks the same question in U.S. small towns, where shops and services line the highway. It also builds directly on your Rural Road Fatality County Panel: same crash data, same years, now down to the street level.
 
 ## What you need to do
 
 | Your task | When | Time |
 |---|---|---|
-| Accounts (ORCID, GitHub, Zenodo) | Already done | 0 min |
-| Answer five setup questions | Now | 10 min |
-| Check 30 sample town centers on aerial photos | After checkpoint 3 | 1 to 2 hours |
-| Check the results using the checklist | When the draft is ready | 1 to 2 hours |
-| Approve publishing | After checking | 5 min |
+| Accounts (ORCID, GitHub, Zenodo) | Done | 0 min |
+| Answer five setup questions | Done (Nov 6, 2026) | 10 min |
+| Town-center check of 45 sample towns | Done (Nov 7, 2026) | 1 to 2 hours |
+| Check the results using the checklist | Done (Nov 7, 2026) | 1 to 2 hours |
+| Approve publishing | Done (Nov 7, 2026) | 5 min |
+| Post the preprint (after checking TRB's preprint policy) | When you choose | 20 min |
 | Submit the TRB paper yourself, using the guide | Summer 2027 (TRB call opens) | 20 min |
 
 Everything else is built for you.
@@ -57,4 +58,4 @@ Everything else is built for you.
 5. **Figures and draft paper.** Every number in the paper comes straight from the data.
 6. **Ready for your check.** You verify, then we publish.
 
-*You are here: step 6 (verified by the author on Nov 7, 2026; publishing)*
+*You are here: published on November 7, 2026 (GitHub and Zenodo DOI 10.5281/zenodo.24030310); the TRB paper and preprint are ready for your submission.*

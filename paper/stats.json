@@ -42,8 +42,8 @@
    "ped_rate": 0.093,
    "ped_rate_lo": 0.089,
    "ped_rate_hi": 0.097,
-   "ped_share": 0.065,
-   "night_share": 0.412
+   "ped_share": 0.06485,
+   "night_share": 0.41243
   },
   {
    "zone": "CENTER",
@@ -59,8 +59,8 @@
    "ped_rate": 0.276,
    "ped_rate_lo": 0.246,
    "ped_rate_hi": 0.308,
-   "ped_share": 0.265,
-   "night_share": 0.419
+   "ped_share": 0.26461,
+   "night_share": 0.41898
   },
   {
    "zone": "TOWN",
@@ -76,8 +76,8 @@
    "ped_rate": 0.146,
    "ped_rate_lo": 0.137,
    "ped_rate_hi": 0.155,
-   "ped_share": 0.138,
-   "night_share": 0.436
+   "ped_share": 0.13846,
+   "night_share": 0.43607
   }
  ],
  "rates_pooled_excl_new_england": [
@@ -95,8 +95,8 @@
    "ped_rate": 0.095,
    "ped_rate_lo": 0.091,
    "ped_rate_hi": 0.099,
-   "ped_share": 0.065,
-   "night_share": 0.414
+   "ped_share": 0.06492,
+   "night_share": 0.41385
   },
   {
    "zone": "CENTER",
@@ -112,8 +112,8 @@
    "ped_rate": 0.285,
    "ped_rate_lo": 0.254,
    "ped_rate_hi": 0.319,
-   "ped_share": 0.269,
-   "night_share": 0.414
+   "ped_share": 0.26886,
+   "night_share": 0.41389
   },
   {
    "zone": "TOWN",
@@ -129,8 +129,8 @@
    "ped_rate": 0.147,
    "ped_rate_lo": 0.138,
    "ped_rate_hi": 0.156,
-   "ped_share": 0.138,
-   "night_share": 0.437
+   "ped_share": 0.13825,
+   "night_share": 0.43674
   }
  ],
  "rates_new_england_only": [
@@ -148,8 +148,8 @@
    "ped_rate": 0.058,
    "ped_rate_lo": 0.045,
    "ped_rate_hi": 0.073,
-   "ped_share": 0.063,
-   "night_share": 0.371
+   "ped_share": 0.06273,
+   "night_share": 0.37082
   },
   {
    "zone": "CENTER",
@@ -165,7 +165,7 @@
    "ped_rate": 0.162,
    "ped_rate_lo": 0.088,
    "ped_rate_hi": 0.271,
-   "ped_share": 0.197,
+   "ped_share": 0.19718,
    "night_share": 0.5
   },
   {
@@ -182,8 +182,8 @@
    "ped_rate": 0.108,
    "ped_rate_lo": 0.072,
    "ped_rate_hi": 0.156,
-   "ped_share": 0.147,
-   "night_share": 0.411
+   "ped_share": 0.1466,
+   "night_share": 0.41111
   }
  ],
  "n_new_england_towns_with_segment": 678,
@@ -203,8 +203,8 @@
    "ped_rate": 0.106,
    "ped_rate_lo": 0.1,
    "ped_rate_hi": 0.112,
-   "ped_share": 0.079,
-   "night_share": 0.421
+   "ped_share": 0.07882,
+   "night_share": 0.42118
   },
   {
    "size_band": "2,500 to 9,999",
@@ -221,8 +221,8 @@
    "ped_rate": 0.318,
    "ped_rate_lo": 0.273,
    "ped_rate_hi": 0.37,
-   "ped_share": 0.341,
-   "night_share": 0.441
+   "ped_share": 0.34127,
+   "night_share": 0.44093
   },
   {
    "size_band": "2,500 to 9,999",
@@ -239,8 +239,8 @@
    "ped_rate": 0.154,
    "ped_rate_lo": 0.142,
    "ped_rate_hi": 0.165,
-   "ped_share": 0.16,
-   "night_share": 0.446
+   "ped_share": 0.15983,
+   "night_share": 0.44635
   },
   {
    "size_band": "500 to 2,499",
@@ -257,8 +257,8 @@
    "ped_rate": 0.085,
    "ped_rate_lo": 0.08,
    "ped_rate_hi": 0.092,
-   "ped_share": 0.057,
-   "night_share": 0.408
+   "ped_share": 0.05725,
+   "night_share": 0.40804
   },
   {
    "size_band": "500 to 2,499",
@@ -275,8 +275,8 @@
    "ped_rate": 0.247,
    "ped_rate_lo": 0.205,
    "ped_rate_hi": 0.295,
-   "ped_share": 0.228,
-   "night_share": 0.419
+   "ped_share": 0.2282,
+   "night_share": 0.41916
   },
   {
    "size_band": "500 to 2,499",
@@ -293,8 +293,8 @@
    "ped_rate": 0.133,
    "ped_rate_lo": 0.118,
    "ped_rate_hi": 0.149,
-   "ped_share": 0.119,
-   "night_share": 0.418
+   "ped_share": 0.11901,
+   "night_share": 0.4182
   },
   {
    "size_band": "under 500",
@@ -311,8 +311,8 @@
    "ped_rate": 0.077,
    "ped_rate_lo": 0.068,
    "ped_rate_hi": 0.086,
-   "ped_share": 0.049,
-   "night_share": 0.402
+   "ped_share": 0.04931,
+   "night_share": 0.40166
   },
   {
    "size_band": "under 500",
@@ -329,8 +329,8 @@
    "ped_rate": 0.199,
    "ped_rate_lo": 0.125,
    "ped_rate_hi": 0.301,
-   "ped_share": 0.142,
-   "night_share": 0.345
+   "ped_share": 0.14194,
+   "night_share": 0.34507
   },
   {
    "size_band": "under 500",
@@ -347,8 +347,8 @@
    "ped_rate": 0.128,
    "ped_rate_lo": 0.1,
    "ped_rate_hi": 0.163,
-   "ped_share": 0.081,
-   "night_share": 0.431
+   "ped_share": 0.08134,
+   "night_share": 0.43145
   }
  ],
  "rates_by_region": [
@@ -367,8 +367,8 @@
    "ped_rate": 0.052,
    "ped_rate_lo": 0.047,
    "ped_rate_hi": 0.058,
-   "ped_share": 0.042,
-   "night_share": 0.38
+   "ped_share": 0.04237,
+   "night_share": 0.38023
   },
   {
    "region": "Midwest",
@@ -385,8 +385,8 @@
    "ped_rate": 0.219,
    "ped_rate_lo": 0.17,
    "ped_rate_hi": 0.278,
-   "ped_share": 0.269,
-   "night_share": 0.417
+   "ped_share": 0.26877,
+   "night_share": 0.41702
   },
   {
    "region": "Midwest",
@@ -403,8 +403,8 @@
    "ped_rate": 0.098,
    "ped_rate_lo": 0.083,
    "ped_rate_hi": 0.114,
-   "ped_share": 0.116,
-   "night_share": 0.386
+   "ped_share": 0.11635,
+   "night_share": 0.3862
   },
   {
    "region": "Northeast",
@@ -421,8 +421,8 @@
    "ped_rate": 0.081,
    "ped_rate_lo": 0.072,
    "ped_rate_hi": 0.092,
-   "ped_share": 0.074,
-   "night_share": 0.388
+   "ped_share": 0.07388,
+   "night_share": 0.38762
   },
   {
    "region": "Northeast",
@@ -439,8 +439,8 @@
    "ped_rate": 0.29,
    "ped_rate_lo": 0.218,
    "ped_rate_hi": 0.377,
-   "ped_share": 0.325,
-   "night_share": 0.422
+   "ped_share": 0.32544,
+   "night_share": 0.42236
   },
   {
    "region": "Northeast",
@@ -457,8 +457,8 @@
    "ped_rate": 0.156,
    "ped_rate_lo": 0.126,
    "ped_rate_hi": 0.191,
-   "ped_share": 0.191,
-   "night_share": 0.406
+   "ped_share": 0.19106,
+   "night_share": 0.40558
   },
   {
    "region": "South",
@@ -475,8 +475,8 @@
    "ped_rate": 0.123,
    "ped_rate_lo": 0.117,
    "ped_rate_hi": 0.13,
-   "ped_share": 0.074,
-   "night_share": 0.433
+   "ped_share": 0.07398,
+   "night_share": 0.43329
   },
   {
    "region": "South",
@@ -493,8 +493,8 @@
    "ped_rate": 0.302,
    "ped_rate_lo": 0.258,
    "ped_rate_hi": 0.352,
-   "ped_share": 0.235,
-   "night_share": 0.405
+   "ped_share": 0.23496,
+   "night_share": 0.40462
   },
   {
    "region": "South",
@@ -511,8 +511,8 @@
    "ped_rate": 0.161,
    "ped_rate_lo": 0.149,
    "ped_rate_hi": 0.173,
-   "ped_share": 0.137,
-   "night_share": 0.453
+   "ped_share": 0.13665,
+   "night_share": 0.45267
   },
   {
    "region": "West",
@@ -529,8 +529,8 @@
    "ped_rate": 0.086,
    "ped_rate_lo": 0.073,
    "ped_rate_hi": 0.099,
-   "ped_share": 0.061,
-   "night_share": 0.402
+   "ped_share": 0.06135,
+   "night_share": 0.4022
   },
   {
    "region": "West",
@@ -547,8 +547,8 @@
    "ped_rate": 0.282,
    "ped_rate_lo": 0.19,
    "ped_rate_hi": 0.403,
-   "ped_share": 0.385,
-   "night_share": 0.549
+   "ped_share": 0.38462,
+   "night_share": 0.5493
   },
   {
    "region": "West",
@@ -565,8 +565,8 @@
    "ped_rate": 0.155,
    "ped_rate_lo": 0.126,
    "ped_rate_hi": 0.189,
-   "ped_share": 0.161,
-   "night_share": 0.437
+   "ped_share": 0.1608,
+   "night_share": 0.43716
   }
  ],
  "rates_by_us_signed": [
@@ -585,8 +585,8 @@
    "ped_rate": 0.091,
    "ped_rate_lo": 0.087,
    "ped_rate_hi": 0.096,
-   "ped_share": 0.058,
-   "night_share": 0.417
+   "ped_share": 0.05845,
+   "night_share": 0.4172
   },
   {
    "route_type": "State",
@@ -603,8 +603,8 @@
    "ped_rate": 0.261,
    "ped_rate_lo": 0.226,
    "ped_rate_hi": 0.301,
-   "ped_share": 0.27,
-   "night_share": 0.42
+   "ped_share": 0.27008,
+   "night_share": 0.41988
   },
   {
    "route_type": "State",
@@ -621,8 +621,8 @@
    "ped_rate": 0.144,
    "ped_rate_lo": 0.133,
    "ped_rate_hi": 0.155,
-   "ped_share": 0.136,
-   "night_share": 0.445
+   "ped_share": 0.13578,
+   "night_share": 0.44465
   },
   {
    "route_type": "US",
@@ -639,8 +639,8 @@
    "ped_rate": 0.096,
    "ped_rate_lo": 0.089,
    "ped_rate_hi": 0.102,
-   "ped_share": 0.078,
-   "night_share": 0.403
+   "ped_share": 0.07771,
+   "night_share": 0.40281
   },
   {
    "route_type": "US",
@@ -657,8 +657,8 @@
    "ped_rate": 0.303,
    "ped_rate_lo": 0.252,
    "ped_rate_hi": 0.362,
-   "ped_share": 0.256,
-   "night_share": 0.418
+   "ped_share": 0.2563,
+   "night_share": 0.41761
   },
   {
    "route_type": "US",
@@ -675,14 +675,14 @@
    "ped_rate": 0.149,
    "ped_rate_lo": 0.135,
    "ped_rate_hi": 0.164,
-   "ped_share": 0.143,
-   "night_share": 0.421
+   "ped_share": 0.14312,
+   "night_share": 0.42112
   }
  ],
  "speed_limit_by_zone": {
-  "APPROACH": 56.5,
-  "CENTER": 36.5,
-  "TOWN": 47.6
+  "APPROACH": 56.48,
+  "CENTER": 36.535,
+  "TOWN": 47.572
  },
  "crashes_by_hour": {
   "APPROACH": {
@@ -765,9 +765,9 @@
   }
  },
  "ped_crash_night_share_by_zone": {
-  "APPROACH": 0.76,
+  "APPROACH": 0.76044,
   "CENTER": 0.623,
-  "TOWN": 0.75
+  "TOWN": 0.75048
  },
  "ped_crashes_by_zone": {
   "APPROACH": 2211,

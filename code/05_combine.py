@@ -54,8 +54,8 @@ def rate_table(df, by=None):
                     "crash_rate": round(k / v, 3), "crash_rate_lo": round(lo / v, 3),
                     "crash_rate_hi": round(hi / v, 3),
                     "ped_rate": round(kp / v, 3), "ped_rate_lo": round(plo / v, 3), "ped_rate_hi": round(phi / v, 3),
-                    "ped_share": round(kp / r.fatalities, 3) if r.fatalities else None,
-                    "night_share": round(r.night_crashes / r.known_hour_crashes, 3) if r.known_hour_crashes else None})
+                    "ped_share": round(kp / r.fatalities, 5) if r.fatalities else None,
+                    "night_share": round(r.night_crashes / r.known_hour_crashes, 5) if r.known_hour_crashes else None})
     return out
 
 
@@ -109,14 +109,14 @@ def main():
         "speed_limit_by_zone": (base.assign(w=base.speed_limit_mph * base.length_mi)
                                 .groupby("zone").apply(lambda d: d.w.sum() / d.loc[d.speed_limit_mph.notna(),
                                                                                     "length_mi"].sum())
-                                .round(1).to_dict()),
+                                .round(3).to_dict()),
         "crashes_by_hour": {z: {int(h): int(n) for h, n in grp.items()} for z, grp in
                             pd.crosstab(crashes[crashes.HOUR <= 23].zone,
                                         crashes[crashes.HOUR <= 23].HOUR).iterrows()},
     }
     pc = crashes[(crashes.ped_fatals > 0) & crashes.night.notna()]
     stats["ped_crash_night_share_by_zone"] = pc.groupby("zone").night.apply(
-        lambda x: round(float(x.astype(bool).mean()), 3)).to_dict()
+        lambda x: round(float(x.astype(bool).mean()), 5)).to_dict()
     stats["ped_crashes_by_zone"] = crashes[crashes.ped_fatals > 0].groupby("zone").size().astype(int).to_dict()
     stats["n_regions_center_higher_ped"] = sum(
         1 for reg in REGION if next(r["ped_rate"] for r in stats["rates_by_region"]
