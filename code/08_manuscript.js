@@ -145,14 +145,14 @@ add(table(["Zone", "Miles", "100M VMT", "Fatal crashes", "Deaths", "Pedestrian d
 add(note(`Note: Rate base only (principal arterials, minor arterials, and major collectors with traffic counts). Rates per 100 million vehicle miles traveled (VMT) using 2024 AADT. CI = exact Poisson confidence interval.`));
 
 add(para(`Per mile driven, fatal crashes were less frequent in town centers (${f(C.crash_rate)} per 100 million VMT) and the rest of town (${f(T.crash_rate)}) than on the approaches (${f(P.crash_rate)}). Pedestrian deaths showed the opposite pattern. The pedestrian death rate in town centers, ${f(C.ped_rate, 3)} per 100 million VMT, was ${ratio(C.ped_rate, P.ped_rate)} times the rate on the approaches (${f(P.ped_rate, 3)}) and ${ratio(C.ped_rate, T.ped_rate)} times the rate in the rest of town (${f(T.ped_rate, 3)}). The confidence intervals do not overlap. Pedestrians were ${pct(C.ped_share)} of people killed in town centers, ${pct(T.ped_share)} in the rest of town, and ${pct(P.ped_share)} on the approaches (Figure 1).`));
-add(figure("fig1_rates_by_zone.png", 620, 275));
-add(caption("FIGURE 1 Fatal crash rate (A) and pedestrian death rate (B) by zone."));
+add(figure("fig1_rates_by_zone.png", 620, 262));
+add(caption(`FIGURE 1 (a) Fatal crash rate and (b) pedestrian death rate per 100 million vehicle miles traveled (VMT), by zone. State and U.S. highways in and near U.S. towns under 10,000 people, ${S.years}; FARS crashes, HPMS ${S.hpms_year} traffic. Whiskers: 95% Poisson confidence intervals.`));
 
 add(heading("Town Size, Region, and Route Type", 2));
 const sz = (b, z) => R(z, S.rates_by_size, "size_band", b);
 add(para(`The town-center excess in pedestrian deaths appears in every town size class and grows with town size (Figure 2). In towns of 2,500 to 9,999 people, the town-center pedestrian death rate was ${f(sz("2,500 to 9,999", "CENTER").ped_rate, 3)} per 100 million VMT, compared with ${f(sz("2,500 to 9,999", "APPROACH").ped_rate, 3)} on the approaches. In towns under 500, the center rate was ${f(sz("under 500", "CENTER").ped_rate, 3)} against ${f(sz("under 500", "APPROACH").ped_rate, 3)}, based on fewer deaths and with a wider interval.`));
-add(figure("fig2_ped_rate_by_size.png", 620, 254));
-add(caption("FIGURE 2 Pedestrian death rate by zone and town size."));
+add(figure("fig2_ped_rate_by_size.png", 620, 246));
+add(caption("FIGURE 2 Pedestrian deaths per 100 million VMT by zone and town size. Whiskers: 95% Poisson confidence intervals."));
 
 const rg = (g, z) => R(z, S.rates_by_region, "region", g);
 const rt = (g, z) => R(z, S.rates_by_us_signed, "route_type", g);

@@ -10,3 +10,4 @@ paper/*.pdf
 *.part
 __pycache__/
 .env
+paper/preprint/
