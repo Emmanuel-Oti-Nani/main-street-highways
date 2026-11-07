@@ -10,11 +10,15 @@ import json
 import os
 import shutil
 import subprocess
+import sys
+
+EARTHARXIV = "--eartharxiv" in sys.argv
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 S = json.load(open(os.path.join(ROOT, "paper", "stats.json")))
 A = json.load(open(os.path.join(ROOT, "AUTHORS.json")))["authors"][0]
-OUT = os.path.join(ROOT, "paper", "preprint")
+OUT = os.path.join(ROOT, "paper", "eartharxiv" if EARTHARXIV else "preprint")
+BASE = "Nani_2026_Main_Street_Highways_EarthArXiv_preprint" if EARTHARXIV else "main_street_highways_preprint"
 CONCEPT_DOI = "10.5281/zenodo.24030310"
 
 
@@ -87,7 +91,7 @@ tex = rf"""\documentclass[aps,prd,twocolumn,superscriptaddress,nofootinbib,float
 \usepackage[T1]{{fontenc}}
 \usepackage{{mathpazo}}
 \usepackage{{graphicx,amsmath,booktabs,url}}
-\usepackage[colorlinks=false,linkbordercolor={{0 1 1}},citebordercolor={{0 1 0}},urlbordercolor={{0 1 1}}]{{hyperref}}
+\usepackage[hidelinks]{{hyperref}}
 \usepackage{{orcidlink}}
 \renewcommand{{\doi}}[1]{{\href{{https://doi.org/#1}}{{doi:\,#1}}}}
 
@@ -198,10 +202,28 @@ The dataset, code, provenance log, quality report, and verification records are 
 \end{{document}}
 """
 
+if EARTHARXIV:
+    hdr = (r"\usepackage{fancyhdr}" "\n"
+           r"\fancypagestyle{eax}{\fancyhf{}\renewcommand{\headrulewidth}{0.4pt}"
+           r"\fancyhead[C]{\footnotesize\itshape Non-peer-reviewed preprint submitted to EarthArXiv}"
+           r"\fancyfoot[C]{\footnotesize\thepage}}" "\n")
+    tex = tex.replace(r"\begin{document}", hdr + r"\begin{document}" "\n" r"\pagestyle{eax}", 1)
+    note = (r"\thispagestyle{eax}" "\n"
+            r"\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule\relax}{\small"
+            r"\textbf{Non-peer-reviewed preprint.} This manuscript is a preprint submitted to EarthArXiv and has not been peer reviewed. "
+            r"It has not yet been submitted to a journal. Subsequent versions may have slightly different content. "
+            r"If accepted for publication, the final version will be available via the `Peer-reviewed Publication DOI' link on the EarthArXiv page. "
+            r"Feedback is welcome.\\[3pt]"
+            r"ORCID: \url{https://orcid.org/" + A["orcid"] + r"}\\"
+            r"Correspondence: \href{mailto:" + A["email"] + "}{" + A["email"] + r"}\\"
+            r"Data and code: \href{https://doi.org/" + CONCEPT_DOI + "}{https://doi.org/" + CONCEPT_DOI + r"}}}" "\n\n"
+            r"\medskip" "\n")
+    tex = tex.replace(r"\maketitle" "\n", r"\maketitle" "\n" + note, 1)
+
 os.makedirs(OUT, exist_ok=True)
 for fn in ["fig1_rates_by_zone.pdf", "fig2_ped_rate_by_size.pdf"]:
     shutil.copy(os.path.join(ROOT, "paper", "figures", fn), OUT)
-texf = os.path.join(OUT, "main_street_highways_preprint.tex")
+texf = os.path.join(OUT, BASE + ".tex")
 open(texf, "w").write(tex)
 for _ in range(2):
     r = subprocess.run(["pdflatex", "-interaction=nonstopmode", "-halt-on-error", os.path.basename(texf)],
