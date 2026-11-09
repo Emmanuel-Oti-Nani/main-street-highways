@@ -22,10 +22,14 @@ for _f in ["regular", "bold", "italic"]:
     if os.path.exists(_p):
         font_manager.fontManager.addfont(_p)
 FONT = "TeX Gyre Pagella" if any("Pagella" in f.name for f in font_manager.fontManager.ttflist) else "DejaVu Serif"
+if os.environ.get("FIGFONT") == "termes":  # Times-style font for the EarthArXiv spatial-analysis version
+    for _f in ["regular", "bold", "italic"]:
+        font_manager.fontManager.addfont(f"/usr/share/texmf/fonts/opentype/public/tex-gyre/texgyretermes-{_f}.otf")
+    FONT = "TeX Gyre Termes"
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 S = json.load(open(os.path.join(ROOT, "paper", "stats.json")))
-OUT = os.path.join(ROOT, "paper", "figures")
+OUT = os.environ.get("FIGOUT", os.path.join(ROOT, "paper", "figures"))
 FINAL = "--final" in sys.argv
 ZONES = ["CENTER", "TOWN", "APPROACH"]
 ZLAB = {"CENTER": "Town center", "TOWN": "Rest of town", "APPROACH": "Outside town\n(0-5 mi)"}

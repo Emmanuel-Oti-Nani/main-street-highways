@@ -1,0 +1,225 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{graphicx,booktabs,array,makecell,microtype,xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{orcidlink}
+\usepackage{fancyhdr}
+\usepackage[mathlines]{lineno}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf,labelsep=colon}
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0pt}
+\renewcommand{\linenumberfont}{\normalfont\footnotesize}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[C]{\small\itshape Non-peer-reviewed preprint submitted to EarthArXiv}
+\fancyfoot[C]{\small Page \thepage}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:#1}}
+
+\begin{document}
+
+%% ------------------------------------------------------------------ coversheet
+\thispagestyle{fancy}
+\begin{center}
+{\large\bfseries This is a non-peer-reviewed preprint submitted to EarthArXiv.}
+
+\vspace{2.2em}
+{\LARGE\bfseries Where the Highway Is Main Street: A National Spatial Analysis of Small-Town Centers and Fatal Crashes in the United States, 2015--2024\par}
+
+\vspace{1.6em}
+{\large\bfseries Emmanuel Oti Nani\,\orcidlink{0009-0009-4175-8962}}\\[2pt]
+Independent Researcher, Springfield, Missouri, USA\\
+ORCID: \texttt{\href{https://orcid.org/0009-0009-4175-8962}{https://orcid.org/0009-0009-4175-8962}}\\
+Correspondence: \href{mailto:en289s@missouristate.edu}{en289s@missouristate.edu}
+
+\vspace{2.2em}
+\begin{minipage}{0.82\textwidth}\centering
+This manuscript is a preprint and has not been peer reviewed. It has not yet been submitted to a journal. Subsequent versions of this manuscript may have slightly different content. If accepted for publication, the final version will be available via the `Peer-reviewed Publication DOI' link on the right-hand side of the EarthArXiv webpage. Please feel free to contact the author; feedback is welcome.
+
+\vspace{1.2em}
+Data and code: \texttt{\href{https://doi.org/10.5281/zenodo.24030310}{https://doi.org/10.5281/zenodo.24030310}}
+\end{minipage}
+\end{center}
+\clearpage
+
+%% ------------------------------------------------------------------ article
+\linenumbers
+\begin{center}
+{\Large\bfseries Where the Highway Is Main Street: A National Spatial Analysis of Small-Town Centers and Fatal Crashes in the United States, 2015--2024\par}
+\vspace{0.8em}
+{\bfseries Emmanuel Oti Nani}\\
+Independent Researcher, Springfield, Missouri, USA \textbar{} \texttt{https://orcid.org/0009-0009-4175-8962} \textbar{}\\ en289s@missouristate.edu
+\end{center}
+\vspace{0.4em}
+\hrule
+
+\section*{Abstract}
+Many small U.S.\ towns grew along a state or U.S.\ highway, and in many of them the highway is still the main street, where through traffic meets people walking to shops, schools, and services. National statistics sort places into urban and rural and do not locate these town centers. This study locates the center of every incorporated town of fewer than 10{,}000 people in the lower 48 states (and of every small New England town) from the spatial clustering of everyday destinations, and divides each state and U.S.\ highway into three zones: the town center (a quarter-mile circle around the densest cluster of destinations), the rest of the town, and the same route up to 5 miles outside town. Of 15{,}195 small towns, 10{,}659 have an identifiable center, and in 8{,}995 of these (84\%) a state or U.S.\ highway runs through it; the share is 95\% in the South, 92\% in the Northeast, 85\% in the West, and 74\% in the Midwest. A check of 45 randomly sampled centers found all within a quarter mile of a civic anchor such as a post office, town hall, or courthouse (median 187~m). Fatal crashes from the Fatality Analysis Reporting System, 2015--2024 (39{,}300 crashes), were matched to the zones. Per mile driven, fatal crashes were less frequent in town centers than outside town (0.97 versus 1.27 per 100 million vehicle miles), but pedestrian deaths were 3.0 times as frequent (0.276 versus 0.093), and 26\% of people killed in town centers were walking. This pattern holds in every Census region and town-size class. A place-based definition of the small-town center reveals a concentrated zone of pedestrian risk that the urban--rural division does not show. The geography of town centers, highway zones, and crashes is openly available.
+
+\textbf{Keywords:} small towns, town centers, settlement geography, spatial analysis, geographic information science, main streets, pedestrian safety, Fatality Analysis Reporting System
+
+\section{Introduction}
+Many American small towns took their shape from a road. Towns founded at crossroads, county seats, and railroad stops grew along the routes that later became state and U.S.\ highways, and their commercial blocks still line those routes. In such a town the highway is two things at once: a regional link designed and operated by the state for through traffic at 55 to 65~mph, and the local main street where people park, shop, and walk to the post office and school. In the data assembled here, posted speed limits average 56~mph on the approaches to small towns and 37~mph in their centers, a change that happens within a few hundred feet.
+
+National statistics do not see this geography. Traffic deaths are reported as urban or rural, and a small-town center is too developed to behave like a rural highway and too small to register as urban. The rural/urban label in the national fatal crash census also disagrees with the Census Bureau's urban-area map for a meaningful share of deaths, mostly at urban edges~\cite{nani2026a}. Because the small-town center is defined by what happens along the road, studying it requires a place-based definition: first locate the center, then follow the highway through it.
+
+This study builds that geography for the whole country. It asks three questions. Where are the centers of small U.S.\ towns, and in how many of them does a state or U.S.\ highway serve as the main street? How does the risk of a fatal crash, and of a pedestrian death, change along the highway from the approaches into the rest of the town and into the center? And does the pattern hold across regions and town sizes? The work extends a study of informal economic activity along a national highway corridor in an urbanizing city in Ghana, which found that such activity was associated with road accidents, congestion, and poor sanitation, with 21.8\% of reported accident cases involving informal economic actors~\cite{nani2025}, and a county-level panel of U.S.\ rural road deaths~\cite{panel}.
+
+\section{Background}
+Research on the built environment and traffic safety shows that the setting of a road shapes its risk. Design features meant to make roads more forgiving at high speed can raise risk in developed settings where drivers meet pedestrians, turning vehicles, and parked cars~\cite{ewing}, and arterial strip commercial development is associated with more crashes than compact street patterns~\cite{dumbaugh}. Speed is the main mechanism for pedestrians: the risk that a struck pedestrian is killed rises steeply with impact speed~\cite{tefft}. Guidance for small towns has focused on the edge of town, where a rural highway enters a developed area: speed-reduction techniques for rural high-to-low speed transitions~\cite{forbes} and design guidance for transition zones approaching small towns~\cite{torbic}. National analyses of pedestrian deaths have concentrated on large metropolitan areas, high-poverty counties, and arterial roads~\cite{ghsa,sga}.
+
+Less is known about the center of the small town itself, in part because there is no national map of where small-town centers are. Census boundaries mark legal town limits, which often enclose farmland and highway frontage, not the compact core where activity concentrates. Locating that core from the destinations that draw people on foot, as done here, gives a functional, place-based unit that can be compared across the country.
+
+\section{Data and Methods}
+\subsection{Study area and towns}
+Outside New England, towns are incorporated places from the 2024 TIGER/Line files~\cite{tiger} with a 2024 population estimate under 10{,}000~\cite{popest}. In New England, where local government is organized by towns that the Census Bureau treats as county subdivisions, towns and small cities under 10{,}000 were taken from that layer. Because New England towns often span 30 or more square miles of farmland and forest, town limits there were defined as the incorporated villages and Census Designated Places within the town; 732 towns without such an area were given a center zone only. Towns with more than half of their land inside a 2020 Census urban area of 50{,}000 or more people were dropped as suburbs~\cite{ua}. Alaska and Hawaii were excluded. The result is 15{,}195 small towns. All geometry was processed in the Albers equal-area projection (EPSG:5070).
+
+\subsection{Locating town centers}
+Town centers were located from the spatial clustering of everyday destinations: shops, restaurants, offices and services, government buildings, schools, clinics, lodging, and cultural sites in the Overture Maps places data (release 2026-10-21.0)~\cite{overture}. Destinations with a confidence score below 0.5 or marked as closed were removed, and travel-oriented businesses such as fuel stations and auto services were excluded so that a highway-edge strip would not be mistaken for a downtown. Parks and sports fields were also excluded because they often lie at the edge of town.
+
+For each town, the destination with the most other destinations within a quarter mile (402~m) was found with a k-d tree, and the point was shifted once toward the mean of that cluster, keeping whichever point held more destinations. A town has a center if at least 10 destinations lie within a quarter mile of this point; the center zone is the quarter-mile circle, clipped to the town. Of the 15{,}195 towns, 10{,}659 have an identifiable center. The median center holds 34 destinations (interquartile range 18 to 70). Towns without a center are mostly very small: 63\% of towns under 500 people have none. Figure~\ref{fig:example} shows the result for Stockton, Missouri (2024 population 1{,}841), where the densest cluster of 61 destinations lies where Missouri Routes 32 and 39 meet, 187~m from the Cedar County Courthouse.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{map2_example_town.pdf}
+\caption{How highways are divided into zones, Stockton, Missouri. (a) State highways through the town and up to 5 miles outside it. (b) The town center: the quarter-mile circle around the densest cluster of everyday destinations. Fatal crashes 2015--2024 from FARS. Town limits from TIGER/Line 2024; roads from HPMS 2024; destinations from Overture Maps.}
+\label{fig:example}
+\end{figure}
+
+\subsection{Checking the centers}
+The centers were checked against the places that residents recognize as the middle of town. For a random sample of 45 towns (30 in Missouri and 15 in New England), the post office, town or city hall, and county courthouse were taken from the U.S.\ Geological Survey Geographic Names Information System~\cite{gnis}, and the distance from each center to the nearest of these civic anchors was measured. Where the names database missed a village post office or town office, the nearest civic site was taken from the destinations data. All 45 centers lie within a quarter mile of at least one civic anchor; the median distance is 187~m and the largest 371~m. The centers were also reviewed against aerial imagery. In 3 of the 45 towns the center is a civic or commercial strip along a highway rather than a traditional downtown; in one New England town it is the present-day civic center, about 3~km from the historic town common.
+
+\subsection{Highway zones}
+Road geometry and attributes come from the 2024 Highway Performance Monitoring System (HPMS)~\cite{hpms}. Study roads are those signed as U.S.\ or state routes plus any road owned by the state highway agency on a principal arterial, minor arterial, or collector; Interstates, ramps, local roads, and the second direction of divided highways were removed. Each road was cut into 50~m pieces, and each piece was assigned by its midpoint to one of three zones: the town center; the rest of town (inside town limits but outside the center); or outside town (the same route outside every incorporated place, within 5 miles of the town's limits, assigned to the nearest town whose limits the route enters). Pieces were combined into one segment per town, route, and zone, carrying length, annual average daily traffic (AADT), posted speed limit where reported, and lanes. The dataset holds 72{,}301 town--route--zone segments.
+
+\subsection{Crashes and rates}
+Fatal crashes and victims come from the Fatality Analysis Reporting System (FARS), 2015--2024~\cite{fars}. A crash was matched to a study segment if it lies within 50~m of a study road and FARS records it on a U.S.\ or state highway, on a road owned by the state highway agency, or on a road whose route number matches the study route; Interstate crashes were never kept. Where several study roads lay within 50~m, a route-number match was preferred, then the nearest road. Of 357{,}175 fatal crashes in the lower 48 states and the District of Columbia, 39{,}300 (11\%) were matched; the FARS route number agrees with the assigned route for 91\% of them. Exposure is vehicle miles traveled (VMT), computed as 2024 AADT times segment length times 3{,}652.5 days. Rates per 100 million VMT carry exact Poisson 95\% confidence intervals and use segments on principal arterials, minor arterials, and major collectors with traffic counts on at least 90\% of their length, which hold 97\% of matched crashes. Night is 6:00~p.m.\ to 5:59~a.m.
+
+\section{Results}
+\subsection{The geography of main street highways}
+Of the 10{,}659 small towns with an identifiable center, 8{,}995 (84\%) have a state or U.S.\ highway running through it, or 59\% of all 15{,}195 small towns. The highway main street is the norm across the country (Figure~\ref{fig:map}). It is nearly universal in the South, where 95\% of towns with a center have a highway through it, and in the Northeast (92\%), and it is common in the West (85\%) and the Midwest (74\%), where denser grids of county roads give more towns a center away from the state system. The share rises with town size, from 78\% of towns under 500 people to 88\% of towns of 2{,}500 to 9{,}999. In total, these main street highways run 6{,}144 miles through town centers, 34{,}260 miles through the rest of the towns, and 174{,}674 miles on the approaches within 5 miles of town.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.95\textwidth]{map1_national.pdf}
+\caption{Small-town centers on state and U.S.\ highways, lower 48 states. Each point is the center of a town under 10{,}000 people through which a state or U.S.\ highway runs ($n=8{,}995$). Magenta points mark the 293 towns where at least one pedestrian was killed in the town center, 2015--2024; symbol size is proportional to deaths. State outlines from Census cartographic boundary files.}
+\label{fig:map}
+\end{figure}
+
+Over ten years, 1{,}131 fatal crashes occurred on these highways in town centers, 7{,}059 in the rest of town, and 31{,}110 outside town. At least one fatal crash occurred in the center of 954 towns, and at least one pedestrian was killed in the center of 293 towns, 318 pedestrian deaths in all. These towns are spread across the country rather than clustered in one region (Figure~\ref{fig:map}).
+
+\subsection{Fatal risk along the highway}
+Table~\ref{tab:zones} compares the three zones. Per mile driven, fatal crashes were less frequent in town centers (0.97 per 100 million VMT) and the rest of town (0.96) than on the approaches (1.27). Pedestrian deaths showed the opposite gradient: the town-center rate, 0.276, was 3.0 times the approach rate (0.093) and 1.9 times the rest-of-town rate (0.146), with non-overlapping confidence intervals (Figure~\ref{fig:zones}). Pedestrians were 26\% of people killed in town centers, 14\% in the rest of town, and 6\% on the approaches. The gradient follows the spatial structure of the town: as the highway passes from open country into the compact core where destinations cluster, speeds fall and overall fatal crash rates fall with them, but the share and rate of pedestrian deaths rise.
+
+\begin{table}[t]
+\centering
+\caption{Fatal crashes and rates by zone on small-town state and U.S.\ highways, 2015--2024. Rate base only. Rates per 100 million VMT using 2024 AADT; exact Poisson 95\% confidence intervals in parentheses.}
+\label{tab:zones}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrcc}
+\toprule
+Zone & Miles & \makecell[r]{100M\\VMT} & \makecell[r]{Fatal\\crashes} & Deaths & \makecell[r]{Ped.\\deaths} & \makecell{Fatal crash rate\\(95\% CI)} & \makecell{Ped.\ death rate\\(95\% CI)} \\
+\midrule
+Town center & 5{,}782 & 1{,}149 & 1{,}120 & 1{,}198 & 317 & 0.97 (0.92--1.03) & 0.276 (0.246--0.308) \\
+Rest of town & 32{,}123 & 7{,}163 & 6{,}915 & 7{,}533 & 1{,}043 & 0.96 (0.94--0.99) & 0.146 (0.137--0.155) \\
+Outside town & 160{,}857 & 23{,}580 & 30{,}059 & 33{,}833 & 2{,}194 & 1.27 (1.26--1.29) & 0.093 (0.089--0.097) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.95\textwidth]{fig1_rates_by_zone.pdf}
+\caption{(a) Fatal crash rate and (b) pedestrian death rate by zone, state and U.S.\ highways in and near U.S.\ towns under 10{,}000 people, 2015--2024. Whiskers show exact Poisson 95\% confidence intervals.}
+\label{fig:zones}
+\end{figure}
+
+\subsection{Variation by region and town size}
+The town-center excess in pedestrian deaths appears in every Census region and town-size class (Table~\ref{tab:groups}, Figure~\ref{fig:size}). It grows with town size: in towns of 2{,}500 to 9{,}999 people the town-center rate was 0.318 per 100 million VMT, against 0.106 on the approaches; in towns under 500 it was 0.199 against 0.077, with a wider interval. The center-to-outside ratio was highest in the Midwest (4.2), and pedestrians made up the largest share of town-center deaths in the West (38\%) and the Northeast (33\%). The pattern holds on both U.S.\ and state routes and with New England excluded (0.285 versus 0.095).
+
+\begin{table}[t]
+\centering
+\caption{Pedestrian deaths per 100 million VMT by zone and subgroup (rate base only). Ratio is town center to outside town.}
+\label{tab:groups}
+\small
+\begin{tabular}{lccccr}
+\toprule
+Subgroup & Town center & Rest of town & Outside town & Ratio & \makecell[r]{Center ped.\\deaths} \\
+\midrule
+Towns under 500 & 0.199 & 0.128 & 0.077 & 2.6 & 22 \\
+Towns 500--2{,}499 & 0.247 & 0.133 & 0.085 & 2.9 & 123 \\
+Towns 2{,}500--9{,}999 & 0.318 & 0.154 & 0.106 & 3.0 & 172 \\
+\addlinespace
+Northeast & 0.290 & 0.156 & 0.081 & 3.6 & 55 \\
+Midwest & 0.219 & 0.098 & 0.052 & 4.2 & 68 \\
+South & 0.302 & 0.161 & 0.123 & 2.5 & 164 \\
+West & 0.282 & 0.155 & 0.086 & 3.3 & 30 \\
+\addlinespace
+U.S. routes & 0.303 & 0.149 & 0.096 & 3.2 & 122 \\
+State routes & 0.261 & 0.144 & 0.091 & 2.9 & 195 \\
+\addlinespace
+Excluding New England & 0.285 & 0.147 & 0.095 & 3.0 & 303 \\
+New England only & 0.162 & 0.108 & 0.058 & 2.8 & 14 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.95\textwidth]{fig2_ped_rate_by_size.pdf}
+\caption{Pedestrian death rate by zone and town size. Whiskers show exact Poisson 95\% confidence intervals.}
+\label{fig:size}
+\end{figure}
+
+\subsection{Time of day}
+About 42\% of fatal crashes occurred at night in every zone. Fatal pedestrian crashes differed by place: 76\% occurred at night on the approaches and 75\% in the rest of town, but only 62\% in town centers. Daytime pedestrian deaths are therefore relatively more common in the compact core where shops and services are concentrated and people walk during business hours.
+
+\section{Discussion}
+Locating small-town centers from the clustering of everyday destinations shows that the highway main street is the typical form of the American small town, not a special case: in 84\% of towns with an identifiable center, the center lies on a state or U.S.\ highway. It also shows a sharp spatial gradient of risk along these roads. As the highway passes from open country into town and then into the quarter-mile core, the overall fatal crash rate falls, but the pedestrian death rate rises to about 3.0 times its level on the approaches. This is the pattern expected where through traffic at arterial speeds shares a street with walking trips to shops, services, and schools, and it parallels the finding from Ghana that activity along a national highway corridor is tied to road accidents~\cite{nani2025}.
+
+The result has three geographic implications. First, the urban--rural division hides this zone: the same deaths are spread across rural and small-urban categories in national reporting, and only a place-based definition brings the small-town center into view~\cite{nani2026a}. Second, the zone of highest pedestrian risk is small and well defined, the quarter mile around the densest cluster of destinations, so it can be mapped and targeted; transition-zone guidance~\cite{torbic} addresses the entry to town, but the deaths documented here occur inside the center. Third, the geography divides responsibility: the road is owned and designed by the state, while the land uses that generate walking along it are governed by local zoning. Downtown revitalization that adds destinations along a state highway also adds pedestrian exposure, so local downtown plans and state corridor design need to be read together. The relatively high share of daytime pedestrian deaths in centers also means that measures aimed only at nighttime visibility will not address the full problem.
+
+\section{Limitations}
+The data are observational, and pedestrian exposure is not measured, so higher pedestrian death rates in centers partly reflect more walking. FARS records only crashes with a death within 30 days. Traffic volumes are 2024 values applied to all ten years, and the road network is a 2024 snapshot, so towns that gained a bypass during the period are misrepresented for earlier years. Town centers come from a 2026 snapshot of destinations, which may differ from the center of earlier years and may be less complete in the smallest towns; the 45-town check supports the method but does not measure its error nationally. Posted speed limits are incomplete outside the National Highway System, and town limits are legal boundaries that may include rural land.
+
+\section{Conclusions}
+This study maps, for the first time at national scale, the centers of small U.S.\ towns and the state and U.S.\ highways that run through them. A state or U.S.\ highway is the main street of 8{,}995 small towns, 84\% of those with an identifiable center. Along these highways, fatal crashes are less frequent per mile driven in town centers than on the approaches, but pedestrian deaths are about 3.0 times as frequent, in every region and town size. The open dataset of towns, centers, highway zones, and matched crashes gives geographers, planners, and transportation agencies a common spatial base for studying these places and tracking them over time.
+
+\section*{Declarations}
+\textbf{Funding.} None. \textbf{Competing interests.} None. \textbf{Ethics.} Analysis of public, de-identified federal data. \textbf{Use of AI tools.} Claude (Anthropic) assisted with code and data assembly; the author designed and drafted the study, made the analytic decisions, verified the reported figures against the source files, and is responsible for the content.
+
+\section*{Data Availability}
+The towns, town centers, highway segments, matched crashes, code, provenance log, quality report, and verification records are openly available at Zenodo~\cite{dataset} (\doi{10.5281/zenodo.24030310}) and at \url{https://github.com/Emmanuel-Oti-Nani/main-street-highways} under CC~BY~4.0 (data) and MIT (code) licenses.
+
+\nolinenumbers
+\begin{thebibliography}{99}
+\setlength{\itemsep}{2pt}
+\small
+\bibitem{nani2026a} E.~O. Nani, How rural is rural? Agreement between the FARS rural/urban label and 2020 Census urban areas for U.S. traffic deaths, 2015--2024, EarthArXiv preprint (2026), \doi{10.31223/X5RV4C}.
+\bibitem{nani2025} E.~O. Nani, G.~Camynta-Baezie, J.~Anbazu, N.~S. Antwi, D.~Blija, E.~Adabor, and M.~O. Asibey, A burgeon in informal economic activities along highways in urbanizing cities: Implications for sustainable development, \emph{Transportation in Developing Economies} \textbf{11}, 5 (2025), \doi{10.1007/s40890-024-00222-0}.
+\bibitem{panel} E.~O. Nani, U.S. Rural Road Fatality County Panel (Version 1.0.0) [Data set], Zenodo (2026), \doi{10.5281/zenodo.23547649}.
+\bibitem{ewing} R.~Ewing and E.~Dumbaugh, The built environment and traffic safety: A review of empirical evidence, \emph{Journal of Planning Literature} \textbf{23}, 347--367 (2009), \doi{10.1177/0885412209335553}.
+\bibitem{dumbaugh} E.~Dumbaugh and R.~Rae, Safe urban form: Revisiting the relationship between community design and traffic safety, \emph{Journal of the American Planning Association} \textbf{75}, 309--329 (2009), \doi{10.1080/01944360902950349}.
+\bibitem{tefft} B.~C. Tefft, Impact speed and a pedestrian's risk of severe injury or death, \emph{Accident Analysis \& Prevention} \textbf{50}, 871--878 (2013), \doi{10.1016/j.aap.2012.07.022}.
+\bibitem{forbes} G.~J. Forbes, \emph{NCHRP Synthesis 412: Speed Reduction Techniques for Rural High-to-Low Speed Transitions} (Transportation Research Board, Washington, DC, 2011), \doi{10.17226/22890}.
+\bibitem{torbic} D.~J. Torbic, D.~K. Gilmore, K.~M. Bauer, C.~D. Bokenkroger, D.~W. Harwood, L.~M. Lucas, R.~J. Frazier, C.~S. Kinzel, D.~L. Petree, and M.~D. Forsberg, \emph{NCHRP Report 737: Design Guidance for High-Speed to Low-Speed Transition Zones for Rural Highways} (Transportation Research Board, Washington, DC, 2012), \doi{10.17226/22670}.
+\bibitem{ghsa} Governors Highway Safety Association, \emph{Pedestrian Traffic Fatalities by State: 2024 Preliminary Data (January--December)} (GHSA, Washington, DC, 2025).
+\bibitem{sga} Smart Growth America, \emph{Dangerous by Design 2024} (Smart Growth America, Washington, DC, 2024).
+\bibitem{tiger} U.S. Census Bureau, \emph{TIGER/Line Shapefiles, 2024: Places and County Subdivisions} (Washington, DC, 2024).
+\bibitem{popest} U.S. Census Bureau, \emph{Annual Estimates of the Resident Population for Incorporated Places and Minor Civil Divisions, Vintage 2024} (Washington, DC, 2025).
+\bibitem{ua} U.S. Census Bureau, \emph{2020 Census Urban Areas} (Washington, DC, 2023).
+\bibitem{overture} Overture Maps Foundation, Overture Maps Places, release 2026-10-21.0, \url{https://overturemaps.org} (2026).
+\bibitem{gnis} U.S. Geological Survey, Geographic Names Information System, Domestic Names Archive (August 25, 2021), \url{https://www.usgs.gov/tools/geographic-names-information-system-gnis}.
+\bibitem{hpms} Federal Highway Administration, Highway Performance Monitoring System, 2024 spatial data by state, \url{https://geo.dot.gov} (2025).
+\bibitem{fars} National Highway Traffic Safety Administration, Fatality Analysis Reporting System (FARS) national data files, 2015--2024, \url{https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars} (2026).
+\bibitem{dataset} E.~O. Nani, Main Street Highways: Fatal crashes on state and U.S. highways through small-town centers (Version 1.0.0) [Data set], Zenodo (2026), \doi{10.5281/zenodo.24030310}.
+\end{thebibliography}
+
+\end{document}
