@@ -79,9 +79,12 @@ Every download is logged with its source address, date and SHA-256 fingerprint i
 ## License and citation
 
 Code: MIT. Data and documents: CC BY 4.0, with credit to the sources above.
-Cite as: {A['name']} (2027). *Main Street Highways: fatal crashes on state and U.S. highways through small-town centers*
+Cite as: {A['name']} (2026). *Main Street Highways: fatal crashes on state and U.S. highways through small-town centers*
 (Version {VERSION}) [Data set]. Zenodo. https://doi.org/{CONCEPT_DOI}
 (all versions; this version: https://doi.org/{VERSION_DOI})
+
+Paper describing the dataset: {A['name']} (2026). *Main Street Highways: Fatal Crashes on State and U.S. Highways Through
+Small-Town Centers in the United States, 2015–2024*. engrXiv preprint. https://doi.org/10.31224/8795
 
 Maintainer: {A['name']}, {A['affiliation']}. ORCID {A['orcid']}.
 """

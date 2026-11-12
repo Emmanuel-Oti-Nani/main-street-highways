@@ -18,5 +18,13 @@
     "HPMS",
     "open data"
   ],
-  "description": "Open, segment-level dataset of fatal crashes (FARS 2015-2024) on state and U.S. highways in and near U.S. towns under 10,000 people (lower 48 states), split into town center, rest of town, and outside town, with 2024 HPMS traffic. Includes code, provenance log, quality report, codebook, limitations, and verification records."
+  "description": "Open, segment-level dataset of fatal crashes (FARS 2015-2024) on state and U.S. highways in and near U.S. towns under 10,000 people (lower 48 states), split into town center, rest of town, and outside town, with 2024 HPMS traffic. Includes code, provenance log, quality report, codebook, limitations, and verification records.",
+  "related_identifiers": [
+    {
+      "identifier": "10.31224/8795",
+      "relation": "isDescribedBy",
+      "scheme": "doi",
+      "resource_type": "publication-preprint"
+    }
+  ]
 }
