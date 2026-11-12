@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24030310.svg)](https://doi.org/10.5281/zenodo.24030310)
 
-**Status:** DRAFT, not yet verified by the author. Version 1.0.0, built from FARS 2015-2024 and HPMS 2024.
+**Status:** Released. Version 1.0.0, built from FARS 2015-2024 and HPMS 2024.
 
 In thousands of small American towns, the main street is also a state or U.S. highway. This project is an open dataset of
 those roads. It covers every state and U.S. highway that runs through or near a town of under 10,000 people in the lower
